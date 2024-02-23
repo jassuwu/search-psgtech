@@ -1,7 +1,7 @@
 import { GlobeIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
-export async function getSearchResults(query: string) {
+async function getSearchResults(query: string) {
   const res = await fetch(`http://localhost:8000/search?q=${query}`, {
     headers: {
       "Content-Type": "application/json",
