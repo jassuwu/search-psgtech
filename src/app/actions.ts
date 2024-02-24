@@ -1,6 +1,6 @@
 "use server";
 
-import { RedirectType, redirect } from "next/navigation";
+import { redirect } from "next/navigation";
 import { z } from "zod";
 
 const schema = z.object({
@@ -18,7 +18,7 @@ export async function redirectToSearch(formData: FormData) {
     };
   }
 
-  redirect(`search?q=${validatedFields.data.query}`, RedirectType.push);
+  redirect(`search?q=${validatedFields.data.query}`);
 }
 
 export async function imFeelingLucky(formData: FormData) {
@@ -33,7 +33,7 @@ export async function imFeelingLucky(formData: FormData) {
   }
 
   const res = await fetch(
-    `http://localhost:8000/search?q=${validatedFields.data.query}`,
+    `${process.env.SCRAPE_PSGTECH_SERVER}/search?q=${validatedFields.data.query}`,
     {
       headers: {
         "Content-Type": "application/json",

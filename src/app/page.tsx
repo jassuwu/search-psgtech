@@ -48,7 +48,7 @@ export default function Home() {
       </form>
       <footer className="w-full p-4 border-t border-white/50 flex justify-center items-center">
         <p className="text-white font-sans">
-          {"</> by "}
+          {"</> by AK and "}
           <Link
             target="_blank"
             className="underline font-bold"

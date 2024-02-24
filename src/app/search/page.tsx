@@ -2,11 +2,14 @@ import { GlobeIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 async function getSearchResults(query: string) {
-  const res = await fetch(`http://localhost:8000/search?q=${query}`, {
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  const res = await fetch(
+    `${process.env.SCRAPE_PSGTECH_SERVER}/search?q=${query}`,
+    {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
   return res.json();
 }
 
@@ -33,7 +36,7 @@ export default async function Search({
         return (
           <div
             key={result.url}
-            className="w-full flex flex-col justify-start items-start gap-2 font-sans rounded-md px-2 my-2 gap-2 hover:underline"
+            className="w-full flex flex-col justify-start items-start gap-2 font-sans rounded-md px-2 my-2 hover:underline"
           >
             <Link
               className="text-white font-sans text-md hover:underline"

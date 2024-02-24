@@ -2,6 +2,7 @@ import { Input } from "@/components/ui/input";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { redirectToSearch } from "./actions";
+import { Button } from "@/components/ui/button";
 
 export default function Layout({
   children,
@@ -10,7 +11,7 @@ export default function Layout({
 }>) {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between bg-stone-900">
-      <header className="w-full flex px-10 py-6 border-b border-white/50 flex justify-start items-center gap-8">
+      <header className="w-full flex px-10 py-6 border-b border-white/50 justify-start items-center gap-8">
         <Link
           href={"/"}
           className="font-product-sans font-bold text-3xl text-white"
@@ -18,8 +19,10 @@ export default function Layout({
           PSGoogle
         </Link>
         <div className="relative w-1/2 rounded-full">
-          <MagnifyingGlassIcon className="absolute top-[30%] right-[3%] text-white h-5 w-5" />
           <form action={redirectToSearch}>
+            <Button className="absolute top-[10%] right-[1%] bg-transparent hover:bg-stone-700 rounded-full">
+              <MagnifyingGlassIcon className="text-white h-5 w-5" />
+            </Button>
             <Input
               name="q"
               className="w-full rounded-full text-white border-[0.1px] border-white/50 text-lg bg-stone-800 px-[6%] font-sans py-6"
