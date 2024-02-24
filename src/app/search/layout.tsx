@@ -36,14 +36,15 @@ export default function Layout({
       </section>
       <footer className="w-full p-4 border-t border-white/50 flex justify-center items-center">
         <p className="text-white font-sans">
-          {"</> by "}
+          {"Built by AK and "}
           <Link
             target="_blank"
             className="underline font-bold"
             href="https://github.com/jassuwu"
           >
-            jass.
+            jass
           </Link>
+          .
         </p>
       </footer>
     </main>
