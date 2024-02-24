@@ -20,8 +20,8 @@ export default async function Search({
 }) {
   if (!searchParams["q"]) {
     return (
-      <p className="text-white font-sans text-2xl">
-        Please enter a query to search
+      <p className="text-white w-full text-center font-sans text-3xl font-bold">
+        search for something there 👆
       </p>
     );
   }
@@ -36,7 +36,7 @@ export default async function Search({
         return (
           <div
             key={result.url}
-            className="w-full flex flex-col justify-start items-start gap-2 font-sans rounded-md px-2 my-2 hover:underline"
+            className="w-full flex flex-col justify-center items-start gap-2 font-sans rounded-md px-2 my-2 hover:underline"
           >
             <Link
               className="text-white font-sans text-md hover:underline"
@@ -48,9 +48,9 @@ export default async function Search({
               <GlobeIcon className="h-4 w-4 text-cyan-500" />
               <Link
                 href={result.url}
-                className="text-sm text-cyan-500 underline underline-offset-2"
+                className="text-sm text-cyan-500 underline underline-offset-2 text-ellipsis"
               >
-                {result.url}
+                <p className="truncate w-[270px] md:w-full">{result.url}</p>
               </Link>
             </div>
           </div>

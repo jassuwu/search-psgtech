@@ -12,14 +12,14 @@ export default function Home() {
       </footer>
       <form className="w-full">
         <section className="flex flex-col justify-center items-center w-full gap-8">
-          <p className="font-product-sans font-bold text-8xl text-white">
+          <p className="font-product-sans font-bold text-5xl xl:text-8xl text-white">
             PSGoogle
           </p>
-          <div className="relative w-2/6 rounded-full">
-            <MagnifyingGlassIcon className="absolute top-[30%] left-[2%] text-white h-5 w-5" />
+          <div className="relative w-[70%] xl:w-[50%] rounded-full flex justify-center items-center">
+            <MagnifyingGlassIcon className="absolute top-[30%] left-[3%] text-white h-5 w-5" />
             <Input
               name="query"
-              className="w-full rounded-full text-white border-[0.1px] border-white/50 text-lg bg-stone-900 px-[6%] font-sans py-6"
+              className="w-full rounded-full text-white border-[0.1px] border-white/50 text-lg bg-stone-900 px-[12%] xl:px-[6%] font-sans py-6"
               type="text"
             />
           </div>
@@ -37,7 +37,7 @@ export default function Home() {
               {"I'm Feeling Lucky"}
             </Button>
           </div>
-          <p className="text-white font-sans text-sm">
+          <p className="text-white font-sans text-center text-sm">
             <span className="font-bold">PSGoogle offered in:</span>{" "}
             <span className="underline underline-offset-2">
               Absolutely every language on the planet. (Given that it exists in
