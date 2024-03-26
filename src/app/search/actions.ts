@@ -20,3 +20,18 @@ export async function redirectToSearch(formData: FormData) {
 
   redirect(`search?q=${validatedFields.data.query}`, RedirectType.push);
 }
+
+export async function relevanceFeedback(query: string, feedback: -1 | 1) {
+  const result = await fetch(`${process.env.SCRAPE_PSGTECH_SERVER}/feedback`, {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      query,
+      feedback,
+    }),
+  })
+
+  return result.json()
+}

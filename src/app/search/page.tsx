@@ -1,5 +1,6 @@
 import { GlobeIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
+import RelevanceFeedback from "./components/RelevanceFeedback";
 
 async function getSearchResults(query: string) {
   const res = await fetch(
@@ -26,12 +27,15 @@ export default async function Search({
     );
   }
 
+  const query = searchParams["q"];
+
   const results: Array<{ url: string; title: string }> = await getSearchResults(
-    searchParams["q"]
+    query
   );
 
   return (
     <>
+      <RelevanceFeedback query={query} />
       {results.map((result) => {
         return (
           <div
