@@ -29,7 +29,7 @@ export default async function Search({
 
   const query = searchParams["q"];
 
-  const results: Array<{ url: string; title: string }> = await getSearchResults(
+  const { results }: {results: Array<{ url: string; title: string }> } = await getSearchResults(
     query
   );
 

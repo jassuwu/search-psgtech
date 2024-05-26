@@ -40,6 +40,6 @@ export async function imFeelingLucky(formData: FormData) {
       },
     }
   );
-  const results = await res.json();
-  redirect(results[0].url);
+  const response = await res.json();
+  redirect(response.results[0].url);
 }
