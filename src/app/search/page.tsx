@@ -33,9 +33,10 @@ export default async function Search({
     query
   );
 
+  // TODO: ENABLE RELEVANCE FEEDBACK AFTER IMPLEMENTATION IN THE BACKEND
   return (
     <>
-      <RelevanceFeedback query={query} />
+      {false && <RelevanceFeedback query={query} />}
       {results.map((result) => {
         return (
           <div
