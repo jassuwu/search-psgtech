@@ -7,9 +7,10 @@ import { imFeelingLucky, redirectToSearch } from "./actions";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between bg-stone-900">
-      <footer className="w-full p-4 border-t border-white/50 flex justify-center items-center">
-        <p className="text-white font-bold font-sans"></p>
-      </footer>
+      <header className="w-full p-4 border-y border-white/50 flex flex-col justify-center items-center">
+        <p className="text-white text-sm font-sans">Might experience delays of upto 1 minute for the first query if the server was inactive for more than 15 minutes.</p>
+        <p className="text-white text-sm font-sans">Sorry about that :'(</p>
+      </header>
       <form className="w-full">
         <section className="flex flex-col justify-center items-center w-full gap-8">
           <p className="font-product-sans font-bold text-5xl xl:text-8xl text-white">
@@ -48,7 +49,7 @@ export default function Home() {
       </form>
       <footer className="w-full p-4 border-t border-white/50 flex justify-center items-center">
         <p className="text-white font-sans">
-          {"Built by AK and "}
+          {"A "}
           <Link
             target="_blank"
             className="underline font-bold"
@@ -56,7 +57,7 @@ export default function Home() {
           >
             jass
           </Link>
-          .
+          {" product."}
         </p>
       </footer>
     </main>
