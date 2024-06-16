@@ -9,7 +9,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between bg-stone-900">
       <header className="w-full p-4 border-y border-white/50 flex flex-col justify-center items-center">
         <p className="text-white text-sm font-sans">Might experience delays of upto 1 minute for the first query if the server was inactive for more than 15 minutes.</p>
-        <p className="text-white text-sm font-sans">Sorry about that :'(</p>
+        <p className="text-white text-sm font-sans">Sorry about that :(</p>
       </header>
       <form className="w-full">
         <section className="flex flex-col justify-center items-center w-full gap-8">
