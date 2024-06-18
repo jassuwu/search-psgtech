@@ -1,8 +1,6 @@
-For more information about the backend and scraper components of PSGoogle, please refer to the [corresponding repository](https://github.com/jassuwu/psgtechdotedu-scraping).
+# PSGoogle: Frontend
 
-# PSGoogle
-
-The face of the [psgtech.edu](https://psgtech.edu) website.
+The face of the psgoogle.
 A `Next.js` User Interface for PSGoogle Search Engine.
 
 ## Overview
@@ -15,7 +13,7 @@ PSGoogle addresses the challenge of navigating through the dense information on 
 
 ## Features
 
-- **Search Bar**: A responsive and auto-complete enabled search bar for query input.
+- **Search Bar**: A bar for query input.
 - **Results Display**: A dynamic results page that presents documents with titles.
 - **Responsive Design**: A mobile-friendly interface that adapts to various screen sizes for accessibility on the go.
 
@@ -23,15 +21,8 @@ PSGoogle addresses the challenge of navigating through the dense information on 
 
 - **Next.js**: Utilizing the latest features of Next.js for server-side rendering and static generation.
 
-## Getting Started
+# Links
 
-To set up the PSGoogle frontend on your local machine, follow these steps:
-
-1. **Clone the Repository**: Use `git clone <repository_url>` to clone the frontend repository to your local environment.
-2. **Install Dependencies**: Navigate to the cloned directory and run `bun install` to install all the necessary dependencies.
-3. **Start the Development Server**: Execute `bun dev` to start the local development server. By default, the application will be available at `http://localhost:3000`.
-4. **Explore the Application**: Open your browser and navigate to `http://localhost:3000` to start using PSGoogle.
-
-## Contributions
-
-PSGoogle is hardly feature complete, unfortunately. So, if you have any bugs to report or feature to work on, feel free to open an issue or submit a pull request.
+- [scrape-psgtech - the scraper, indexer, server for this frontend](https://github.com/jassuwu/scrape-psgtech)
+- [psgoogle - repo with the docker-compose that is used to deploy everything together](https://github.com/jassuwu/psgoogle)
+- [the old slow python (ew) backend](https://github.com/jassuwu/psgtechdotedu-scraping)
