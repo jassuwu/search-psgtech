@@ -33,6 +33,19 @@ export default async function Search({
     query
   );
 
+  if (results.length < 1) {
+    return (
+      <div className="h-full w-full flex flex-col gap-4 justify-center items-center">
+        <p className="text-white text-center font-sans text-3xl font-bold">
+          whoops could not find anything
+        </p>
+        <p className="text-white text-center font-sans text-3xl font-bold">
+          {" ¯\\_(ツ)_/¯"}
+        </p>
+      </div>
+    );
+  }
+
   // TODO: ENABLE RELEVANCE FEEDBACK AFTER IMPLEMENTATION IN THE BACKEND
   return (
     <>

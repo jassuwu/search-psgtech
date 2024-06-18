@@ -36,7 +36,7 @@ export default function Layout({
       </section>
       <footer className="w-full p-4 border-t border-white/50 flex justify-center items-center">
         <p className="text-white font-sans">
-          {"Built by AK and "}
+          {"A "}
           <Link
             target="_blank"
             className="underline font-bold"
@@ -44,7 +44,7 @@ export default function Layout({
           >
             jass
           </Link>
-          .
+          {" product."}
         </p>
       </footer>
     </main>
